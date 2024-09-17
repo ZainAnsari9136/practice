@@ -1,118 +1,151 @@
-/* Basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
-
-body {
+html, body {
+    width: 100%;
+    height: 100%;
     font-family: Arial, sans-serif;
 }
+nav .nav-top {
+    background-color: #762CFB;
+    padding: 0.5rem;
+    overflow: hidden;
+    font-size: 0.5rem;
+    color: white;
+    white-space: nowrap;
+    position: relative;
+}
+.nav-top i {
+    font-size: 1rem;
+    color: #b288ff;
+}
+.nav-top .scroll-text {
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Hide overflow */
+}
+.nav-top .scroll-content {
+    display: flex;
+    align-items: center;
+    animation: move 50s linear infinite; /* Continuously move the text */
+}
+.nav-top .scroll-text:hover .scroll-content {
+    animation-play-state: paused;
+}
 
-.navbar {
+/* The animation starts with the text fully visible and moves leftward */
+@keyframes move {
+    0% { transform: translateX(-0%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+
+
+/*              nav  bottom          */
+
+.nav-bottom{
+    background-color: rgb(29,28,30);
+    width: 100%;
+    height: 78px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    padding: 0 6.25rem ;
     color: white;
-    padding: 10px 20px;
 }
-
-.nav-left {
-    flex: 1;
-}
-
-.company-name {
-    font-size: 24px;
-}
-
-.nav-center {
-    flex: 2;
+.nav-bottom .left{
     display: flex;
-    justify-content: center;
-}
-
-.rounded-text {
-    background-color: #555;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-}
-
-.nav-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
+    font-weight: 600;
+}
+.nav-bottom .left p{
+    font-size: 2rem;
+}
+.nav-bottom .left b{
+    font-weight: 200;
+    /* font-size: 2rem; */
+    color: #762CFB;
+}
+.nav-bottom .left img{
+    width: 2.5rem;
+}
+.nav-bottom .middle{
+    background-color: rgb(21,21,21);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 2px solid #762CFB;
+}
+.nav-bottom .right{
+    /* background-color: #762CFB; */
+    padding: 1rem;
+}
+.nav-bottom .right a{
+   text-decoration: none;
+   color: white;
+   margin: 0 1rem 0 0 ;
+   font-weight: 500;
+}
+.nav-bottom .right button{
+   padding: 1rem;
+   width: 3.75rem;
+   height: 45px;
+   background-color: #762CFB;
+   border-radius: 5px;
+   border: none;
+}
+.nav-bottom .right button i{
+   font-size: 1.25rem;
+   color: white;
 }
 
-.nav-item {
-    margin-right: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
 
-.cart-button {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+/*          banner        */
 
-.cart-button:hover {
-    background-color: #ff4500;
-}
+/* .banner{
+    padding: 2;
+} */
 
-/* Hamburger Menu Styling */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
 
-.bar {
+
+
+
+
+
+
+
+
+
+
+main{
+    /* background-color: #000000; */
+    background-image: url(https://t3.ftcdn.net/jpg/03/95/27/02/360_F_395270291_DnrS0DkYCftowc2P5RgFnoqtTaknTNkX.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 4px;
-    background-color: white;
-    margin: 2px 0;
+    height: 100%;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-right {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #333;
-        width: 200px;
-        padding: 10px;
-        border-radius: 8px;
-    }
 
-    .hamburger {
-        display: flex;
-    }
 
-    .nav-item {
-        margin: 10px 0;
-    }
 
-    .cart-button {
-        margin-top: 10px;
-    }
-}
 
-/* Show the menu when active */
-.nav-right.active {
-    display: flex;
-}
+
+
+
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    nav .nav-top {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .nav-top i {
+        font-size: 14px;
+    }
+} */

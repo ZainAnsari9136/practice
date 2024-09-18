@@ -149,11 +149,20 @@ main{
     }
 }
 @media (max-width : 964px) {
+    
     .nav-bottom{
         padding: 20px;
     }
     .nav-bottom .middle{
         display: none;
+    }
+    .hamburger{
+        display: flex;
+        width: 160px;
+        align-items: center;
+        justify-content: space-between;
+        /* flex-direction: row; */
+        /* width: 500px; */
     }
     .hamburger a{
         display: flex;
@@ -189,7 +198,7 @@ main{
         margin-left: -100px;
     }
     .nav-bottom .left-mobile img{
-        width: 6vw;
+        width: 2.5rem;
     }
     .nav-bottom .left-mobile p{
         /* width: 1rem; */

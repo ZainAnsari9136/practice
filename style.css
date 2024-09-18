@@ -178,7 +178,7 @@ main{
         display: none;
      }
 }
-@media (max-width : 767px) {
+@media (max-width : 768px) {
     .nav-bottom .left{
         display: none;
         /* color: black; */
